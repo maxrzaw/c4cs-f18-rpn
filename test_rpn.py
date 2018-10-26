@@ -38,6 +38,10 @@ class TestBasics(unittest.TestCase):
         result = rpn.calculate('1 2 + 1 +')
         self.assertEqual(4, result)
 
+    def test_chain2many(self):
+        with self.assertRaises(Exception):
+            result = rpn.calculate('1 1 + 1 1 +')
+
     def test_exp(self):
         result = rpn.calculate('2 3 ^')
         self.assertEqual(8, result)
