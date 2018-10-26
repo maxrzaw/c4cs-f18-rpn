@@ -2,6 +2,7 @@
 
 import operator
 
+# Dictionary of operators
 operators = {
     '+': operator.add,
     '-': operator.sub,
